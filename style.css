@@ -1,21 +1,28 @@
 
+/* 🌸 Body */
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background: #ffe4ec;
   margin: 0;
   text-align: center;
 }
 
-/* Header */
+/* 🧸 Header */
 header {
   background: #ffb6c1;
-  padding: 15px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Cart Box */
+/* 🛒 Cart */
+#cart {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 🧾 Cart Box */
 #cart-items {
   display: none;
   background: white;
@@ -24,39 +31,67 @@ header {
   border-radius: 10px;
 }
 
-/* Products Grid */
+/* 🛍️ Products Grid */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 25px;
+  padding: 30px;
 }
 
-/* Card */
+/* 🎁 Product Card */
 .card {
-  background: white;
+  background: #fff;
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* 🖼️ Product Image */
 .card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-/* Button */
+/* 💖 Button */
 button {
   background: #ff69b4;
-  border: none;
-  padding: 10px;
   color: white;
+  border: none;
+  padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
   background: #ff1493;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  #cart-items {
+    width: 100%;
+    margin: 10px;
+  }
+
 }
